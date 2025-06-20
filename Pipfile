@@ -9,10 +9,12 @@ flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-jwt-extended = "*"
 psycopg2-binary = "*"
+sqlalchemy-serializer = "*"
 pipenv = "*"
 shell = "*"
+dotenv = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.13"
+python_version = "3.8.13"
