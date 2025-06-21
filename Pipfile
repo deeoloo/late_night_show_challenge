@@ -9,10 +9,12 @@ flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-jwt-extended = "*"
 psycopg2-binary = "*"
-sqlalchemy-serializer = "*"
 pipenv = "*"
 shell = "*"
 dotenv = "*"
+sqlalchemy-serializer = "*"
+faker = "*"
+flask-bcrypt = "*"
 
 [dev-packages]
 

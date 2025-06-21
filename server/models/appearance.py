@@ -1,4 +1,4 @@
-from app import db
+from server.app import db
 from sqlalchemy import Column, Integer, ForeignKey
 from sqlalchemy.orm import relationship, validates
 from sqlalchemy_serializer import SerializerMixin

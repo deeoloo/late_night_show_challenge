@@ -1,4 +1,4 @@
-from app import db
+from server.app import db
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from sqlalchemy_serializer import SerializerMixin
@@ -10,7 +10,8 @@ class Guest(db.Model, SerializerMixin):
     name = Column(String, nullable= False)
     occupation = Column(String, nullable=False)
 
-    appearance= relationship('Appearance', back_populates='guest')
+    
+    appearances = db.relationship("Appearance", back_populates="guest")
     serialize_rules = ('-appearances.guest',)
 
     def __repr__(self):

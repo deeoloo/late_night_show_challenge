@@ -1,4 +1,4 @@
-from app import db
+from server.app import db
 from sqlalchemy import Column, Integer, Date
 from sqlalchemy.orm import relationship
 from sqlalchemy_serializer import SerializerMixin
@@ -10,7 +10,7 @@ class Episode(db.Model, SerializerMixin):
     date = Column(Date, nullable=False)
     number = Column(Integer)
 
-    appearance= relationship('Appearance', back_populates='episode')
+    appearances= relationship('Appearance', back_populates='episode')
     serialize_rules = ('-appearances.episode')
 
     def __repr__(self):

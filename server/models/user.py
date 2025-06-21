@@ -1,4 +1,4 @@
-from app import db, bcrypt
+from server.app import db, bcrypt
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import validates
 from sqlalchemy_serializer import SerializerMixin
