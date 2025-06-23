@@ -11,7 +11,7 @@ class Guest(db.Model, SerializerMixin):
     occupation = Column(String, nullable=False)
 
     
-    appearances = db.relationship("Appearance", back_populates="guest")
+    appearances = relationship("Appearance", back_populates="guest")
     serialize_rules = ('-appearances.guest',)
 
     def __repr__(self):

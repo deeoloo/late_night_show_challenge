@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "95824b4c-b5a7-4d12-9acf-b0240e25c538",
+		"name": "Late_show",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45825690"
+	},
+	"item": [
+		{
+			"name": "Episodes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/episodes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"episodes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Episode/id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Guests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/guests",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"guests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appearances",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Deeh\",\n    \"password\":\"Adm1n123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Deeh\",\n    \"password\":\"Adm1n123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Episode",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MDY3NTY0NSwianRpIjoiYWMwYjA2MGYtMzYxYS00MmYzLWEyZGUtM2FjZTQyODE5OTdjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NiwibmJmIjoxNzUwNjc1NjQ1LCJjc3JmIjoiNTAxN2I5OWItM2E2OS00NzUxLTkzNjgtOWY0MDUxYjUyY2VlIiwiZXhwIjoxNzUwNjc2NTQ1fQ.fI_pjhZYItbmY55Esd0Qr7wgDxfPDvcHucZ_SHOFofo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Deeh\",\n    \"password\":\"Adm1n123\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/episode/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"episode",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appearance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MDY3NjgwOCwianRpIjoiMGZiMGYxN2ItN2I3YS00NGMzLWEyMWMtMDViNTc4YzY0NDg0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NiwibmJmIjoxNzUwNjc2ODA4LCJjc3JmIjoiYjM4YTYwYjgtYTllNi00NDZmLWFlZjktMDE1ZjViYTA5Njc3IiwiZXhwIjoxNzUwNjc3NzA4fQ.S7QVmCwIxc-oKzVWmJfWbKYRd-JbJlfoSkb71IOB7Os",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\": 5,\n    \"guest_id\": 4,\n    \"episode_id\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/appearances",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"appearances"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -11,7 +11,7 @@ class Episode(db.Model, SerializerMixin):
     number = Column(Integer)
 
     appearances= relationship('Appearance', back_populates='episode')
-    serialize_rules = ('-appearances.episode')
+    serialize_rules = ('-appearances.episode',)
 
     def __repr__(self):
         return f'Episode{self.date} {self.number}'

@@ -15,6 +15,9 @@ class Appearance(db.Model, SerializerMixin):
     guest = relationship('Guest', back_populates='appearances')
     episode = relationship('Episode', back_populates='appearances')
 
+    serialize_rule = ('-episode.appearances', '-guest.appearances',)
+    serialize_only = ('id', 'rating', 'guest_id','episode_id',)
+
     @validates('rating')
     def validate_rating(self, key, rating):
         if not (1 <= rating <= 5):
